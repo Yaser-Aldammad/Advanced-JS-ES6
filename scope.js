@@ -9,3 +9,4 @@ function test() {
 }
 test();
 console.log(example); // global scope
+// expected results 15, 10, 5
