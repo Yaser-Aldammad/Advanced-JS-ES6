@@ -7,3 +7,12 @@ var: all variables created with var can be reassigned, have function scopoe and 
 // refernced before declaration
 console.log(example); // undefiend ==> to correct it you have to give it value in the begining them declare it at the end, see scope.js
 var example = 'example';
+
+// variables with var are not constant, they can be created, assigned, and reassigned a value at will.
+// Delcared and assigned
+var example = { prop1: 'test' };
+console.log('example:', example);
+// expected output example: {prop1: 'test'}
+// value reassigned
+example = 5;
+console.log(example); // expected output:5
