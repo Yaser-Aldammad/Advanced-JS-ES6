@@ -58,3 +58,51 @@ const constExampleDeclared = { prop1: 'test' };
 // object properity update
 constExampleDeclared.prop1 = 500; // expected no error because subproperity was modified
 console.log(constExampleDeclared);
+
+/* var, let, const.
+    The key differences are in the nature of const, the scope and the hoisting. var is function scoped, not ConstantSourceNode, and hoisted to the top of the scope block.let and const are both block-scoped and not hoisted.let is not Constant, while, const is constant but immutable.
+
+    Exercise:
+        To utilize the var, const, and let variable declaration keywords for variable hoisting and reassignment properties, perform the following steps:
+    1. Log the string Hoisted before assignment: and the value of the hoisted variable.
+    2. Define a variable called hoisted with the keyword var and assign it the value this got hoisted.
+    3. Log the string hoisted after assignment: and the value of the hoisted variable.
+    4. Create a try-catch block.
+    5. Inside the try block, log the value of the variable called notHoisted1.
+    6. Inside the catch block, give the catch block the err parameter, then log the string Not hoisted1 with error: and the value of errmessage.
+    7. After the try-catch block, create the notHoisted1 variable with the let keyword and assign the value 5
+    8. Log the string notHoisted1 after assignment and the value of notHoisted1.
+    9. Create another try-catch block.
+    10. Inside the try block, log the value of the notHoisted2 variable.
+        11. Inside the catch block, give the catch block the err parameter, then log the string Not hoisted2 with error: and the value of err.message.
+    12. After the second try-catch block, create the notHoisted2 variable with the keyword const and assign the value [1, 2, 3]
+    13. Log the string notHoisted2 after assignment and the value of notHoisted2.
+    14. Define a final try catch block.
+    15. Inside the try block, reassign notHoisted2 to the new value string.
+    16. Inside the catch block, give the catch block the err parameter, then log the stringb Not hoisted 2 was not able to be changed.
+    17. After the try-catch block, push the value 5 onto the array in notHoisted2.
+    18. Log the string notHoisted2 updated. Now is: and the value of notHoisted2. */
+
+console.log('Hoisted before assignment', hoisted); // expected output undefined
+var hoisted = 'this got hoisted';
+console.log('hoisted after assignemnt', hoisted); // expected output Hoisted after assignment: this got hoisted
+try {
+	console.log(notHoisted1);
+} catch (err) {}
+/* console.log('Not hoisted1 with error', err.message); // expected output Not hoisted with error: is not defined
+ */ let notHoisted1 = 5;
+/* console.log('notHoisted1 after assignment', notHoisted1) // expected output notHoisted after assignment 5
+ */ try {
+	console.log(notHoisted2);
+} catch (err) {
+	console.log('Not hoisted2 with error', err.message); // Not hoisted2 with error notHoisted2 is not defined
+}
+const notHoisted2 = [1, 2, 3];
+/* console.log('notHoisted2 after assignment', notHoisted2) // expected output notHoisted2 after assignemt [1,2,3]
+ */ try {
+	notHoisted2 = 'new value';
+} catch (err) {
+	console.log('Not hoisted 2 was not able to be changed'); // Not hoisted 2 was not able to be changed
+}
+notHoisted2.push(5);
+console.log('notHoisted updated. Now is:', notHoisted2); // expected output notHoisted updated. Now is: [1,2,3,5]
