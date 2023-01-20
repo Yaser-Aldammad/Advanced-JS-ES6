@@ -33,5 +33,28 @@ letExample = 5;
 console.log(letExample);
 
 //Refernced before declaration is undefined error because let variable cannot be hoisted
-console.log(refExample);
-let refExample = 'refExample'; // expected output is not defined cuz let variable can not be hoisted
+/* console.log(refExample);
+let refExample = 'refExample'; */ // expected output is not defined cuz let variable can not be hoisted
+
+/* ==============================================================================================================
+const variable
+1. const and let are similiar keywords becuase they have block scopoing and do not het hoisted to the top of the scope,
+2. const signifies that the identifier can not be reassigned. the value written in const varialbe cannot be changed. if the value changed will throw a TypeError.
+3. if an array or object is stored in a variable declared with const, the value can not be overwritten. However, the array content or object properties can be changed. The contents of an array can be modified with functions such as push (to add), pop (to remove), or map (to update) and object properities can be added, removed or updated.
+
+in the professional world, always use let and const, becuase they provide all the functionality of var and allow the programmer to be specifica and restrictive with varialbe scope and usage.
+ */
+
+// const have block scope and do not get hoisted to the top of the scope
+// referenced before declaration
+/* console.log(constExample); // expected output ReferenceError cuz is nto defined
+const constExample = 'constExample'; */ // expected output cannot access before initialization
+
+// Declared and initialized
+const constExampleDeclared = { prop1: 'test' };
+// variables reassigned
+/* constExampleDeclared = 5; */ // expected TypeError error because const variable cannot be reassigned
+
+// object properity update
+constExampleDeclared.prop1 = 500; // expected no error because subproperity was modified
+console.log(constExampleDeclared);
