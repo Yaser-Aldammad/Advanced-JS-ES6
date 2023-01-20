@@ -64,3 +64,19 @@ different scope.
 variables (call it scope) and assign it the value a third scope.
 12. Log the new variable's value.
 13. Call fn1 and observe its output */
+function fn1() {
+	console.log('scope 1');
+	let scope = 5;
+	console.log(scope);
+	{
+		console.log('scope 2');
+		let scope = 'different scope';
+		console.log(scope);
+	}
+	{
+		console.log('scope 3');
+		let scope = 'a third scope';
+		console.log(scope);
+	}
+}
+fn1();
