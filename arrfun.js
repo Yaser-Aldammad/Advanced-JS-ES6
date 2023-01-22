@@ -40,3 +40,27 @@ const fn2 = (a, b) => {
 	return a + b;
 };
 console.log(fn1(5, 6), fn2(6, 6));
+
+
+Arrow Function Syntax
+
+1. We do not use parenthesis around the argument, if we only have one argument.
+arg1 => {Do function stufll here}
+2. We use parenthesis around the argument, if we have more than one parameter.
+3. we use parenthesis, if we add a default value or perform operations in the function.
+(arg1 = 10)=>{Do function stuff here}
+4. if we create an arrow function with no argument, then we need to include the parenthesis, but they will be empty
+    ()=> {Do function stuff here }
+
+
+
+the function syntax varies, depending on the body of the function.
+1. Multiline ==> we must surrond it with {}
+2. single line ==> we do not need to include the curly braces around the body of the function
+
+// multiple line body arrow function
+(arg1, arg2)=> {
+    console.log(´this is arg1: ${arg1}´)
+    console.log(`this is arg2: ${arg2}`)
+    //many more lines of code can go here
+}
