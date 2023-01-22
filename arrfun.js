@@ -59,8 +59,25 @@ the function syntax varies, depending on the body of the function.
 2. single line ==> we do not need to include the curly braces around the body of the function
  */
 // multiple line body arrow function
-(arg1, arg2)=> {
-    console.log(´this is arg1: ${arg1}´)
-    console.log(`this is arg2: ${arg2}`)
-    //many more lines of code can go here
-}
+(arg1, arg2) => {
+	console.log(`this is arg1: ${arg1}`);
+	console.log(`this is arg2: ${arg2}`);
+	//many more lines of code can go here
+};
+
+// single line body arrow function
+(arg1, arg2) => console.log(`This is arg1: ${arg1}`);
+
+/* using arrow function in a single line Syntax, we exclude { return } keyword.The arrow function automatically returns the resolved value of the expression on that line. */
+
+//with return keyword - not necessary
+(num1, num2) => {
+	return num1 + num2;
+};
+
+// if called with arguments num1 = 5 and num2=5, expected output is 10
+
+// without return keyword or braces
+(num1, num2) => num1 + num2;
+
+// if called with arguments num1=5 and num2=5, expected output is 10
