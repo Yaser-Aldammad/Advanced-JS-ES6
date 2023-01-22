@@ -23,3 +23,16 @@ console.log(`this is line 1
 this is line 2`);
 // expected output: This is line 1
 // This is line 2
+
+/* Exercise converting to template literals
+to convert standard string object to template literals to demonstrate teh power of template literal expressions, perform the following steps:
+1. create two variables, (a) and(b), and save numbers into them.
+2. log the sum of (a) and (b) in the format a + b is equal to <result> using normal strings.
+3. log the sum of (a) and (b) in the format a + b is equal to <result> using a single template literal.
+
+*/
+let a = 5, // you do not need to repeat let before every varialbe as you separate them by comma
+	b = 5;
+
+console.log('the sum of a and b is equal to', a + b);
+console.log(`the sum of a and b is equal ${a + b}`);
