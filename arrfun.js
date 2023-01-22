@@ -155,3 +155,17 @@ const fn3 = a => {
     a = a * a;
     return a + a
 }
+
+// 5. Convert fn4 with no input argument syntax
+const fn4 = function () {
+    let a = 10;
+    a = a * a;
+    return a + a;
+}
+
+const fn4 = () => {
+    let a = 10;
+    a = a * a;
+    return a + a;
+}
+    console.log(a);
