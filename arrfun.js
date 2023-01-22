@@ -127,13 +127,13 @@ Special syntax can then be applied to the function argument and body to simplify
 const fn1 = function (a, b) {
     b++;
     a++;
-    return a + b
+    return a + b;
     }
 
 const fn1= (a, b) => {
     b++;
     a++;
-    return a +b
+    return a + b;
 }
 
 //2. Convert fn2 with single statement function body syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body. Remove the curly braces ({}) around the function body. Remove the return keyword.
@@ -142,21 +142,24 @@ const fn2 = function (a, b) {
     return a * b;
 }
 
-const fn2 = (a, b) => a * b
+const fn2 = (a, b) => a * b;
 
 
 // 3. convert fn3 with single input argument syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body. Remove the parentheses around the function input argument.
 const fn3 = function (a) {
-    a = a * a
-    return a +a
+    a = a * a;
+    return a + a;
 }
+
 
 const fn3 = a => {
     a = a * a;
-    return a + a
+    return a + a;
 }
 
-// 5. Convert fn4 with no input argument syntax
+
+// 4. Convert fn4 with no input argument syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body.
+
 const fn4 = function () {
     let a = 10;
     a = a * a;
@@ -168,4 +171,18 @@ const fn4 = () => {
     a = a * a;
     return a + a;
 }
-    console.log(a);
+
+// 5. convert fn5 with object literal syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body. Remove the curly braces ({}) around the function body. Remove the return keyword. Surround the returned object with parentheses.
+
+const fn5 = function (a) {
+    return { prop1: a };
+}
+const fn5 = (a) => ({ prop1: a });
+
+
+
+console.log( fn1( 5, 10 ) ); // output 17
+console.log(fn2(5, 10));// output 50
+console.log( fn3( 5 ) ); // output 50
+console.log( fn4() ); // output 200
+console.log(fn5(5)); // output {prop1: 5}
