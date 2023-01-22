@@ -101,4 +101,23 @@ if we have an arrow function returning an object literal, we will need special S
 Since a single line arrow functions do not need curly braces, we must use the specil syntax to prevent the object literal's curly braces from being interpreted as either function body curly braces or scope block curly braces. To do this we surround the returned object leteral with parentheses. This instruction the JS engine to interpret curly braces inside the parentheses as an expresion instead of function body of scope block delcaration. */
 
 //arrow function with an object literal in the body
-(num1, num2)=> ({prop1: num1, prop2: num2}) // return an object
+(num1, num2) => ({ prop1: num1, prop2: num2 }) // return an object
+
+
+/*
+Arrow function scope
+arrow function follow normal scoping rule in JS, with exception of the(this) scope.
+1. in normal JS function recall(this) is assigned to a scope.
+2. in arrow function (this) is not assigned.
+
+arrow functions inherit their parent's (this) scope and cannot have a new (this) scope bound to them. This means that, as expected, arrow functions have access to the scope of the parent function, and subsequently, the variables in that scope, but the scope of (this) cannot be changed in an arrow function.
+using the.apply(), .call(), or.bind() function modifiers will not change the scope of an arrow function' (this) property. IF you are in a situation where you must bind (this) to another scope, then you must use a normal JS function.
+
+    in Summary, arrow function provide us with a way to simplify the syntax of anonymous functions.To write an arrow function, simply omit the function keyword and add an arrow between the argument and function body.
+
+
+Special syntax can then be applied to the function argument and body to simplify the arrow function even more.if the function has a single input argument, then we can omit the parentheses around it.if the function body has a sinle line, we can omit the { return } keyword and the curly braces around it.However, single - line functions that return an ojbect literal must be surrounded with parentheses.
+
+    finally, we can also use parentheses around the function body to break a sinlge line body into multiple lines for readability.
+
+ */
