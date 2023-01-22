@@ -130,8 +130,16 @@ const fn1 = function (a, b) {
     return a + b
     }
 
-const fn1(a, b) => {
+const fn1= (a, b) => {
     b++;
     a++;
     return a +b
 }
+
+//2. Convert fn2 with single statement function body syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body. Remove the curly braces ({}) around the function body. Remove the return keyword.
+
+const fn2 = function (a, b) {
+    return a * b;
+}
+
+const fn2 = (a, b) => a * b
