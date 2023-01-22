@@ -41,7 +41,7 @@ const fn2 = (a, b) => {
 };
 console.log(fn1(5, 6), fn2(6, 6));
 
-
+/*
 Arrow Function Syntax
 
 1. We do not use parenthesis around the argument, if we only have one argument.
@@ -57,7 +57,7 @@ arg1 => {Do function stufll here}
 the function syntax varies, depending on the body of the function.
 1. Multiline ==> we must surrond it with {}
 2. single line ==> we do not need to include the curly braces around the body of the function
-
+ */
 // multiple line body arrow function
 (arg1, arg2)=> {
     console.log(´this is arg1: ${arg1}´)
