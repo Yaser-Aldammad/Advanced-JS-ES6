@@ -186,3 +186,13 @@ console.log(fn2(5, 10));// output 50
 console.log( fn3( 5 ) ); // output 50
 console.log( fn4() ); // output 200
 console.log(fn5(5)); // output {prop1: 5}
+
+/*
+• Single input argument: arg1 => {  function body  }
+• No input arguments: ( ) => {  function body  }
+• Single line function body: ( arg1, arg2, argn ) =>  single line
+• Single expression broken over multiple lines: ( arg1, arg2, argn ) => (  multi
+line single expression  )
+• Object literal return value: (arg1, arg2, argn) => ({  object literal  })
+
+ */
