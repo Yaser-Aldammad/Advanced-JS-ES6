@@ -82,16 +82,23 @@ the function syntax varies, depending on the body of the function.
 
 // if called with arguments num1=5 and num2=5, expected output is 10
 
-
-since arrow function with single expression bodies can be defined without the curly braces, we need special syntax to allow us to split the single expression over multiple lines.To do this, we can wrap the multi - line expression i parentheses.The JS interpreter sees that the line are wrapped in parentheses and treats it as if it were a single line of code.
-
+/* since arrow function with single expression bodies can be defined without the curly braces, we need special syntax to allow us to split the single expression over multiple lines.To do this, we can wrap the multi - line expression i parentheses.The JS interpreter sees that the line are wrapped in parentheses and treats it as if it were a single line of code.
+ */
 // arrow function with a single line body
 // assume numArray is an array of numbers
-(numArray)=> numArray.filter(n => n > 5).map(n => n - 1).every(n => n < 10)
+(numArray) =>numArray.filter((n) => n > 5).map((n) => n - 1).every((n) => n < 10)
 
 // arrow function with a sinlge line body brokein into mulitple lines
 // assume numArray is an array of numbers
-    (numArray)=> (numArray.filter(n => n > 5)
-        .map(n => n - 1)
-        .every(n => n < 10)
-)
+(numArray) =>
+	numArray
+		.filter((n) => n > 5)
+		.map((n) => n - 1)
+		.every((n) => n < 10);
+
+/* Object literal is a comma - separated list of name - value pairs inside of curly braces.
+if we have an arrow function returning an object literal, we will need special SyntaxError.in ES6, scope blocks, function bodies, and object literals are all defined with curly braces.
+Since a single line arrow functions do not need curly braces, we must use the specil syntax to prevent the object literal's curly braces from being interpreted as either function body curly braces or scope block curly braces. To do this we surround the returned object leteral with parentheses. This instruction the JS engine to interpret curly braces inside the parentheses as an expresion instead of function body of scope block delcaration. */
+
+//arrow function with an object literal in the body
+(num1, num2)=> ({prop1: num1, prop2: num2}) // return an object
