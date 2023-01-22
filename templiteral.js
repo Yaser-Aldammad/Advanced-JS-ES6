@@ -38,3 +38,13 @@ console.log('the sum of a and b is equal to', a + b);
 
 console.log(`the sum of a and b is equal ${a + b}`);
 console.log(`the sum of ${a} and ${b} is equla to ${a + b}`);
+
+/* Nesting
+Template literals allow for expression nesting.new template literal can be put inside the expression of a template literal.since teh nested lemplate literal is part of the expression, it will be parsed as a new template literal and will not interfere with the external template literal.in some cases, nesting a template literal is the easiest and most readable way to create a string. */
+
+function javascriptOrPlusPlus() {
+	return 'Javascript';
+}
+const outputLiteral = `we are learing about ${`professional ${javascriptOrPlusPlus()}`}`;
+console.log(outputLiteral);
+// expected output: we are learning about professional Javascript
