@@ -143,3 +143,15 @@ const fn2 = function (a, b) {
 }
 
 const fn2 = (a, b) => a * b
+
+
+// 3. convert fn3 with single input argument syntax. Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body. Remove the parentheses around the function input argument.
+const fn3 = function (a) {
+    a = a * a
+    return a +a
+}
+
+const fn3 = a => {
+    a = a * a;
+    return a + a
+}
