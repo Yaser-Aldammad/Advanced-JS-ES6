@@ -81,3 +81,17 @@ the function syntax varies, depending on the body of the function.
 (num1, num2) => num1 + num2;
 
 // if called with arguments num1=5 and num2=5, expected output is 10
+
+
+since arrow function with single expression bodies can be defined without the curly braces, we need special syntax to allow us to split the single expression over multiple lines.To do this, we can wrap the multi - line expression i parentheses.The JS interpreter sees that the line are wrapped in parentheses and treats it as if it were a single line of code.
+
+// arrow function with a single line body
+// assume numArray is an array of numbers
+(numArray)=> numArray.filter(n => n > 5).map(n => n - 1).every(n => n < 10)
+
+// arrow function with a sinlge line body brokein into mulitple lines
+// assume numArray is an array of numbers
+    (numArray)=> (numArray.filter(n => n > 5)
+        .map(n => n - 1)
+        .every(n => n < 10)
+)
