@@ -35,4 +35,6 @@ let a = 5, // you do not need to repeat let before every varialbe as you separat
 	b = 5;
 
 console.log('the sum of a and b is equal to', a + b);
+
 console.log(`the sum of a and b is equal ${a + b}`);
+console.log(`the sum of ${a} and ${b} is equla to ${a + b}`);
