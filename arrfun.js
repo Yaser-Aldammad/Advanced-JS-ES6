@@ -121,3 +121,17 @@ Special syntax can then be applied to the function argument and body to simplify
     finally, we can also use parentheses around the function body to break a sinlge line body into multiple lines for readability.
 
  */
+
+    // exercises
+    //1. convert fn1 with basic ES6 Remove the function keyword before the function arguments. Add an arrow between the function arguments and function body.
+const fn1 = function (a, b) {
+    b++;
+    a++;
+    return a + b
+    }
+
+const fn1(a, b) => {
+    b++;
+    a++;
+    return a +b
+}
