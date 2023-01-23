@@ -117,4 +117,4 @@ const house = {
 	price: 5000000,
 	owner: 'John Doe',
 };
-console.log(parseHouse(house));
+console.log(parseHouse(house)); // expected output John Doe is selling the property at 123 Main St, San Francisco CA, USA for 5000000 USD
