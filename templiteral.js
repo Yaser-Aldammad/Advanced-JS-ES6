@@ -67,8 +67,31 @@ function tagFunction(strings, numExp, fruitExp) {
 	if (numExp > 1) fruit += 's';
 	return str0 + quantity + str1 + fruit + str2;
 }
+
 const fruit = 'apple',
 	num = 10;
 // note: lack of parentheses or whitespace when calling tag function
 const output = tagFunction`we have ${num} of ${fruit}. Exciting`;
 console.log(output);
+
+/* IN summary,
+1. the template literals allow for the simplification of complicated string expressions.
+2. Template literal allows you to embed variables and complicated expression into strings.
+3. Template literal can even be nested into the expression fields of other template literals.
+4. If a template literal is broken into multiple line in the source code, the interpreter will interpret that as a new line in the string and insert one accordingly
+5. Template literals alos provide a new way to parse and manipulate strings with the tagged template function.
+6. The taged template functions also give access to the raw strings as they were entered, ignoring any escape sequences.
+
+Excerise Template Literals Conversion:
+
+You are building a website for a real estate company. You must build a function that
+takes in an object with property information and returns a formatted string that states
+the property owner, where the property is located (address), and how much they are
+selling it for (price). Consider the following object as input:
+{
+address: '123 Main St, San Francisco CA, USA',
+floors: 2,
+price: 5000000,
+owner: 'John Doe'
+}
+ */
