@@ -94,4 +94,27 @@ floors: 2,
 price: 5000000,
 owner: 'John Doe'
 }
+
+To utilize a template literal to pretty-print an object, perform the following steps:
+1. Create a function called parseHouse that takes in an object.
+2. Return a template literal from the function. Using expressions, embed the owner,
+address, and price in the format <Owner> is selling the property at <address>
+for <price>.
+3. Create a variable called house and save the following object into it: { address: "123
+Main St, San Francisco CA, USA", floors: 2, price: 5000000, owner: "John
+Doe" }
+4. Call the parseHouse function and pass in the house variable.
+5. Log the output.
  */
+
+function parseHouse(property) {
+	return `${property.owner} is selling the property at ${property.address} for ${property.price} USD`;
+}
+
+const house = {
+	address: '123 Main St, San Francisco CA, USA',
+	floors: 2,
+	price: 5000000,
+	owner: 'John Doe',
+};
+console.log(parseHouse(house));
