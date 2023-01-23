@@ -62,10 +62,13 @@ function tagFunction(strings, numExp, fruitExp) {
 	const str0 = strings[0]; // "we have"
 	const str1 = strings[1]; // "of"
 	const quantity = numExp < 10 ? 'very few' : 'a lot';
-	return str0 + quantity + str1 + fruitExp;
+	const str2 = strings[2]; // "exciting"
+	let fruit = fruitExp;
+	if (numExp > 1) fruit += 's';
+	return str0 + quantity + str1 + fruit + str2;
 }
 const fruit = 'apple',
-	num = 8;
+	num = 10;
 // note: lack of parentheses or whitespace when calling tag function
-const output = tagFunction`we have ${num} of ${fruit}.Exciting`;
+const output = tagFunction`we have ${num} of ${fruit}. Exciting`;
 console.log(output);
