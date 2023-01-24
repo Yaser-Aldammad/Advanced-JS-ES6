@@ -9,9 +9,23 @@ A. ES5:
 
 function getPersionES5(name, age, height) {
 	return {
-		name: name,
+		name: name, // doublication
 		age: age,
 		height: height,
 	};
 }
-getPersionES5('Zachary', 23, 195); // expected output {name: Zachary, age: 23, height 195}
+const output = getPersionES5('Zachary', 23, 195); // expected output {name: Zachary, age: 23, height 195}
+console.log(output);
+
+/* B.ES6:
+In ES6 we remove the repetition.we can simply state the variable in the object literal declaration and it will create a property with a key that match the variable name and a value that matches the variable value. */
+
+function getPersionES6(name, age, height) {
+	return {
+		name,
+		age,
+		height,
+	};
+}
+const outputES6 = getPersionES6('Adam', 5, 115); // expected output { name: 'Adam', age: 5, height: 115 }
+console.log(outputES6);
