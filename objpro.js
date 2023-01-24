@@ -97,3 +97,28 @@ const person2 = {
 console.log(person2); // Elias Aldammad
 console.log(person2.firstName); // Elias
 console.log(person2.lastName); // Aldammad
+
+/* Exercise:
+you are building a simple JS math package to publish to Node Package Manage NPM.Your module will export an object that contains several constants and functions.Using ES6 syntax:
+Create the export object with the following functions and values:
+1. the value of pi
+2. the ratio to convert inches to feet
+3. function that sums two arguments
+4. function that substracts two arguments
+5. log the object after it has been created
+ */
+const PI = 3.1415;
+const Inches_To_Feet = 0.083333;
+const exportObject = {
+	PI, // 3.1415
+	Inches_To_Feet, //0.083333
+	sum(n1, n2) {
+		return n1 + n2; //sum: [function : sum]
+	},
+	subtract(n1, n2) {
+		return n1 - n2; // sum: [function : subtract]
+	},
+};
+console.log(exportObject.subtract(100, 50), exportObject.sum(5, 10)); // 50, 15
+console.log(exportObject.subtract(100, 50)); // 50
+console.log(exportObject.sum(5, 10)); // 15
