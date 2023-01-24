@@ -1,5 +1,10 @@
 /* ES6 syntactic sugar
-it is a syntax that is designed to make expressions easier to read and express.It makes the syntax "sweet" becuase code can be expressed concisely
+it is a syntax that is designed to make expressions easier to read and express.It makes the syntax "sweet" becuase code can be expressed concisely.
+ES6 add three ways to simplify the declaration of object literals: property notation, computed property, and function notation.
+1. to simplify property creation in objects, when properties are created from variables, we can omit the key name and the colon.
+2. the name property that's created is set to the variable name and the value is set to the value of the varialbe.
+3. to add a function as a property to an object, we can omit the colon and function keyword. the name of the property that's created is set to the function name and the value of the property is the function itself.
+4. we can create property names from computed expressions during the declaration of the object lieteral. we simply replace the key name with the expression in the brackets.
 
 Object Properties
 ES5 VS ES6
@@ -77,6 +82,8 @@ console.log(person.lastName); // Aldammad
 console.log(person); //Adam Aldammad
 
 /* the property name of varName was computed to be firstName.When accessing the property, we simply reference it as person.firstName.When creating computed property in object literals, the value that's computed in the brackets does not need to be a variable, it can be almost expression, even function.
+
+we create 2 variables. the first contains the string 'first' and the second contains a function that returns a string. we then create an object and use computed property notation to create dynamic object key names. the first key name is equal to 'firstName'. When 'person.firstName' is accessed, the value that is saved will be returned. the Second key name is equal to 'lastName'. When 'person.lastName' is accessed, the value that was saved will be returned.
  */
 
 const varName2 = 'first';
