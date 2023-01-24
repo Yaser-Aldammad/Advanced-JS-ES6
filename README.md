@@ -6,4 +6,4 @@ This repository covers Advanced Javascript to speed up web development
 2. Declaring Varialbes (variables.js)
 3. Introducing Arrow Function (arrfun.js)
 4. Learning Template Literals (templiteral.js)
-5. Enhanced Object Properties, ES6 syntactic sugar
+5. Enhanced Object Properties, ES6 syntactic sugar (objpro.js)
