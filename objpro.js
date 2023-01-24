@@ -75,3 +75,18 @@ console.log(person.firstName); // Adam
 
 console.log(person.lastName); // Aldammad
 console.log(person); //Adam Aldammad
+
+/* the property name of varName was computed to be firstName.When accessing the property, we simply reference it as person.firstName.When creating computed property in object literals, the value that's computed in the brackets does not need to be a variable, it can be almost expression, even function.
+ */
+
+const varName2 = 'first';
+function computedNameType(type) {
+	return type + 'Name';
+}
+const person2 = {
+	[varName2 + 'Name']: 'Elias',
+	[computedNameType('last')]: 'Aldammad',
+};
+console.log(person2); // Elias Aldammad
+console.log(person2.firstName); // Elias
+console.log(person2.lastName); // Aldammad
