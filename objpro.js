@@ -106,6 +106,19 @@ Create the export object with the following functions and values:
 3. function that sums two arguments
 4. function that substracts two arguments
 5. log the object after it has been created
+steps:
+1. Create an object and save it into the exportObject variable.
+2. Create a variable called PI that contains the value of pi (3.1415).
+3. Create a variable called INCHES_TO_FEET and save the value of the inches to feet
+conversion ratio (0.083333).
+Using ES6 enhanced property notation, add a property called PI from the variable
+PI. Add a property called INCHES_TO_FEET from the INCHES_TO_FEET variable, which
+contains the inches to feet conversion ratio.
+Add a function property called sum that takes in two input arguments and returns
+the sum of the two input arguments.
+Add a function property called subtract that takes in two input arguments and
+returns the subtraction of the two input arguments.
+4. Log the object exportObject.
  */
 const PI = 3.1415;
 const Inches_To_Feet = 0.083333;
