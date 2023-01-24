@@ -56,9 +56,22 @@ function getPersionES6Age(name, age, height) {
 		name,
 		height,
 		getAge() {
-			return age;
+			return age; // Notice the difference in the function declaration. We omit the function keyword and the colon after the property key name. Once again, this saves us a bit of space and simplifies things a little.
 		},
 	};
 }
 const outPutES6 = getPersionES6Age('Adam', 5, 115).getAge();
-console.log(outPutES6);
+console.log(outPutES6); // expected output 5
+
+/* Computed Properties
+creates property names from variables through computed property notation []. */
+
+const varName = 'firstName';
+const person = {
+	[varName]: 'Adam',
+	lastName: 'Aldammad',
+};
+console.log(person.firstName); // Adam
+
+console.log(person.lastName); // Aldammad
+console.log(person); //Adam Aldammad
